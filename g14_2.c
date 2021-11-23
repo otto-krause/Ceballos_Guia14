@@ -8,8 +8,8 @@ int main()
 }
  for(int f=0;f<3;f++){
  v[0][f]*=4;}
- for(int f=0;f<3;f++){
- v[1][f]*=3;}
+ for(int f=0;f<2;f++){
+ v[f][2]*=3;}
  for(int f=0;f<2;f++){
  for(int x=0;x<3;x++){
  printf("%i\t ",v[f][x]);
