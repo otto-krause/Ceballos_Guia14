@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 void main()
-{ float c[3][12], imp, recaudacionLinea[3], recaudacionCoche[12], recaudacionGeneral = 0;
+{ float c[3][12], imp, rLinea[3], rCoche[12], rGeneral = 0;
   int i, x, linea, continuar, coche;
   for (i = 0;i<3;i++) {
-    recaudacionLinea[i] = 0;
+    rLinea[i] = 0;
     for (x = 0;x<12;x++){
         c[i][x] = 0;
-        recaudacionCoche[x] = 0;
+        rCoche[x] = 0;
         }
     }
         for(int i=0;i<3;i++){
@@ -21,18 +21,18 @@ void main()
 
     for (i = 0;i<3;i++) {
         for (x = 0;x<12;x++){
-            recaudacionLinea[i] += c[i][x];
-            recaudacionCoche[x] += c[i][x];
-            recaudacionGeneral += c[i][x];
+            rLinea[i] += c[i][x];
+            rCoche[x] += c[i][x];
+            rGeneral += c[i][x];
         }
     }
-
-    printf("Recuadacion total: %.2f\n", recaudacionGeneral);
-    printf("Recuadacion Linea 1: %.2f\n", recaudacionLinea[0]);
-    printf("Recuadacion Linea 2: %.2f\n", recaudacionLinea[1]);
-    printf("Recuadacion Linea 3: %.2f\n\n", recaudacionLinea[2]);
+    system("cls");
+    printf("Recuadacion total: %.2f\n", rGeneral);
+    printf("Recuadacion Linea 1: %.2f\n", rLinea[0]);
+    printf("Recuadacion Linea 2: %.2f\n", rLinea[1]);
+    printf("Recuadacion Linea 3: %.2f\n\n", rLinea[2]);
     for (x = 0;x<12;x++){
-        printf("Recuadacion Coche %d: %.2f\n", x+1, recaudacionCoche[x]);
+     printf("Recuadacion Coche %d: %.2f\n", x+1, rCoche[x]);
     }
 
     system("pause");
