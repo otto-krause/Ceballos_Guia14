@@ -10,22 +10,22 @@ void main()
         rCoche[x] = 0;
         }
     }   int r=1;
-        while(r=1){
+        while(r==1){
         printf("Ingresar linea (1 - 3): "); scanf("%i", &l);
-        if(l<1){printf("La linea debe ser entre 1 - 3\n"); continue;
+        if(l<1 || l>3){printf("La linea debe ser entre 1 - 3\n"); continue;
         }
         printf("Ingresar coche (1 - 12): "); scanf("%i", &coc);
         if(coc>12){printf("El coche debe estar entre 1 - 12\n");
         continue;}
         printf("Ingresar recaudacion: "); scanf("%f", &imp);
         c[l-1][coc-1]+=imp;
-        printf("Deseai ingresar mas datos?\n");
+        printf("Desea ingresar mas datos? si = 1|no = 0\n");
         scanf("%i", &r);
-        if(r!=1){break;} else continue;
+        if(r!=1)break; else continue;
       }
 
-    for (int i = 0;i<3;i++) {
-        for (int x = 0;x<12;x++){
+    for (int i=0;i<3;i++) {
+        for (int x=0;x<12;x++){
             rLinea[i]+=c[i][x];
             rCoche[x]+=c[i][x];
             rGeneral+=c[i][x];
