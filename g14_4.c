@@ -9,18 +9,19 @@ void main()
         c[i][x] = 0;
         rCoche[x] = 0;
         }
-    }
-        for(int i=0;i<3;i++){
+    }   int r=1;
+        while(r=1){
         printf("Ingresar linea (1 - 3): "); scanf("%i", &l);
         if(l<1){printf("La linea debe ser entre 1 - 3\n"); continue;
         }
-        for(int x=0;x<12;x++){
         printf("Ingresar coche (1 - 12): "); scanf("%i", &coc);
-        if(c>12){printf("El coche debe estar entre 1 - 12\n");
+        if(coc>12){printf("El coche debe estar entre 1 - 12\n");
         continue;}
         printf("Ingresar recaudacion: "); scanf("%f", &imp);
         c[l-1][coc-1]+=imp;
-        }
+        printf("Deseai ingresar mas datos?\n");
+        scanf("%i", &r);
+        if(r!=1){break;} else continue;
       }
 
     for (int i = 0;i<3;i++) {
