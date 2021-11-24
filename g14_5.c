@@ -24,7 +24,7 @@ return 0;
 void imprimir(int a, int b, int x[3][5], int neu)
 { printf("Esta seguro/a que desea cambiar la nota %i por %i? [si = 1|no = 0]", x[3][5], neu);
   int d; scanf("%i", &d); if(d==1){
-  printf("\tPrimer t\Segundo t\Tercer\n");
+  printf("\tPrimer \tSegundo \tTercer\n");
   int p=0;
   for(int f=0;f<b;f++){
      printf("%i\t",f+1);
