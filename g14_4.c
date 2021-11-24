@@ -11,11 +11,11 @@ void main()
         }
     }
         for(int i=0;i<3;i++){
-        printf("Ingresar linea ( 1 - 3): "); scanf("%d", &l);
+        printf("Ingresar linea ( 1 - 3): "); scanf("%i", &l);
         if(l>1){printf("La linea debe ser entre 1 - 3\n"); continue;
         }
         for(int x=0;x<12;x++){
-        printf("Ingresar coche ( 1 - 12): "); scanf("%d", &coc);
+        printf("Ingresar coche ( 1 - 12): "); scanf("%i", &coc);
         if(c>12){printf("El coche debe estar entre 1 - 12");
         continue;}
         printf("Ingresar recaudacion: "); scanf("%f", &imp);
@@ -31,11 +31,11 @@ void main()
         }
     }
     system("cls");
-    printf("La Recuadacion total es : %.2f\n", rGeneral);
+    printf("La Recuadacion total es : %0.2f\n", rGeneral);
     for(int i=0;i<3;i++){
-    printf("Recuadacion Linea %i: %.2f\n",i+1,rLinea[i]);
+    printf("Recuadacion Linea %i: %0.2f\n",i+1,rLinea[i]);
     }
     for (int x=0;x<12;x++){
-     printf("Recuadacion Coche %i: %.2f\n", x+1, rCoche[x]);
+     printf("Recuadacion Coche %i: %0.2f\n", x+1, rCoche[x]);
     }
 }
