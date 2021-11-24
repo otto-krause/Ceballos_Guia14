@@ -14,22 +14,22 @@ int main()
       printf("Ingrese el legajo y el trimestre a modificar: \n");
       scanf("%i %i", &l, &t);
       printf("Ingrese la nueva nota: "); scanf("%i", &n);
-      v[t-1][l-1]=n; imprimir(3,4,v,n);
+      v[t-1][l-1]=n; printf("Esta seguro/a que desea cambiar la nota %i por %i? [si = 1|no = 0]", v[3][c], n);
+      int d; scanf("%i", &d); if(d==1){
+      imprimir(3,c,v);} else {
       printf("Desea continuar? [si = 1|no = 0] \n");
       int c; scanf("%i", &c); if(c=1)continue;
       else {break;}
       }
 return 0;
 }
-void imprimir(int a, int b, int x[3][5], int neu)
-{ printf("Esta seguro/a que desea cambiar la nota %i por %i? [si = 1|no = 0]", x[3][5], neu);
-  int d; scanf("%i", &d); if(d==1){
-  printf("\tPrimer \tSegundo \tTercer\n");
+void imprimir(int a, int b, int x[3][c])
+{ printf("\tPrimer \tSegundo \tTercer\n");
   int p=0;
   for(int f=0;f<b;f++){
      printf("%i\t",f+1);
   for(int z=0;z<a;z++){
-    printf("%i\t",x[f][z]);
+    printf("%i\t",x[f][z-1]);
     p+=x[f][z];
     }
     printf("%i", p/3);
@@ -37,4 +37,3 @@ void imprimir(int a, int b, int x[3][5], int neu)
     }
   }
 
-}
