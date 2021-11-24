@@ -12,7 +12,7 @@ void main()
     }
         for(int i=0;i<3;i++){
         printf("Ingresar linea ( 1 - 3): "); scanf("%d", &l);
-        if(l>1){printf("La linea debe ser entre 1 - 3"); continue;
+        if(l>1){printf("La linea debe ser entre 1 - 3\n"); continue;
         }
         for(int x=0;x<12;x++){
         printf("Ingresar coche ( 1 - 12): "); scanf("%d", &coc);
@@ -38,6 +38,4 @@ void main()
     for (int x=0;x<12;x++){
      printf("Recuadacion Coche %i: %.2f\n", x+1, rCoche[x]);
     }
-
-    system("pause");
 }
