@@ -18,17 +18,18 @@ int main()
       int d; scanf("%i", &d); if(d==1){
       imprimir(3,c,v);} else {
       printf("Desea continuar? [si = 1|no = 0] \n");
-      int c; scanf("%i", &c); if(c=1)continue;
+      int ch; scanf("%i", &ch); if(ch=1)continue;
       else {break;}
       }
 return 0;
+   }
 }
 void imprimir(int a, int b, int x[3][c])
 { printf("\tPrimer \tSegundo \tTercer\n");
   int p=0;
-  for(int f=0;f<b;f++){
+  for(int f=0;f<a;f++){
      printf("%i\t",f+1);
-  for(int z=0;z<a;z++){
+  for(int z=0;z<b;z++){
     printf("%i\t",x[f][z-1]);
     p+=x[f][z];
     }
@@ -36,4 +37,3 @@ void imprimir(int a, int b, int x[3][c])
     printf("\n");
     }
   }
-
